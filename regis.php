@@ -130,10 +130,15 @@ else{
             $sql = "UPDATE Members SET FacebookID = '$facebook_id' WHERE StudentID =  $student_id ;";
             if ($connect->query($sql) === TRUE) {
 
-                $_SESSION['nickname'] = $fbRow['Nickname'];
-                $_SESSION['email'] = $fbRow['Email'];
-                $_SESSION['facebook_id'] = $fbRow['FacebookID'];
-                $_SESSION['team'] = $fbRow['TeamID'];
+                $_SESSION['nickname'] = $row['Nickname'];
+                $_SESSION['email'] = $row['Email'];
+                $_SESSION['facebook_id'] = $row['FacebookID'];
+                $_SESSION['team_id'] = $row['TeamID'];
+                $_SESSION['team_name'] = $rowTeam['TeamName'];
+                $_SESSION['student_id'] = $row['StudentID'];
+                $_SESSION['nameeng'] = $row['NameEng'];
+                $_SESSION['tel'] = $row['Tel'];
+                
                 echo "<div class=\"container\"
                 <p></p><p class=\"text-primary\"> Register successfully </p>";
                 echo "<p></p>

@@ -5,9 +5,11 @@ include ('navbar.php');
 include ('connect.php');
 
  ?>
+ <head><title><?php echo $_SESSION['nameeng'];?> </title></head>
 
 <div class='container'>
-    
+
+
     <h4 class= 'text-primary'> <?php echo $_SESSION['nameeng'];?> </h4>
     <TABLE class= 'text-muted'>
     <TR>
@@ -21,7 +23,7 @@ include ('connect.php');
     <TR>
         <TD> email  </TD><TD>  :  <?php echo $_SESSION['email'];?> </TD></TR>
     <TR>
-        <TD> tel  </TD><TD>  :  <?php echo $_SESSION['tel'];?> </TD></TR>
+        <TD> tel  </TD><TD>  :  0<?php echo $_SESSION['tel'];?> </TD></TR>
     </TABLE>
 </div>
 

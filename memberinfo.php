@@ -53,7 +53,7 @@ include ('connect.php');
             <TABLE class='table text-muted'>
             <TR><TD> Email </TD><TD>:  $email</TD></TR>
             <TR><TD> Facebook </TD><TD>:  $facebook</TD></TR>
-            <TR><TD> Tel </TD><TD>:   $tel </TD></TR></TABLE><BR />";
+            <TR><TD> Tel </TD><TD>:   0$tel </TD></TR></TABLE><BR />";
 
 
         }
