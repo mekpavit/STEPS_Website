@@ -2,7 +2,7 @@
 	include "navbar.php";
 	include("connect.php");
 	// create necessary session value for test
-	include("fake_session.php");
+	//include("fake_session.php");
 ?>
 <!DOCTYPE html>
 <html>
