@@ -63,22 +63,29 @@
 
 				//$phnum="090"; test
 					echo "<div class='row'>
-							<div class='col-xs-4'>
+							<div class='col-xs-3'>
 								<div class='form-group'>
 									<label for='propo'>ผู้ติดต่อ</label>
 										<input type='text' name='proposer' class='form-control' placeholder='ชื่อผู้ติดต่อ' id='propo' value='".$_SESSION['nickname']."' readonly>
 								</div>
 							</div>
-						<div class='col-xs-4'>
-							<div class='form-group'>
-								<label for='fd'>ฝ่าย</label>
-								<input type='text' name='field' class='form-control' placeholder='ฝ่ายของคุณ' id='fd' value='".$_SESSION['team_name']."' readonly>
+							<div class='col-xs-3'>
+								<div class='form-group'>
+									<label for='fd'>ฝ่าย</label>
+										<input type='text' name='field' class='form-control' placeholder='ฝ่ายของคุณ' id='fd' value='".$_SESSION['team_name']."' readonly>
+								</div>
 							</div>
-						</div>
-						<div class='col-xs-4'>
-							<div class='form-group'>
-								<label for='ph'>เบอร์ติดต่อ</label>
-								<input type='text' name='phoneNumber' class='form-control' placeholder='090-xxx-xxx'id='ph' value='".$phnum."' readonly>
+							<div class='col-xs-3'>
+								<div class='form-group'>
+									<label for='ph'>เบอร์ติดต่อ</label>
+									<input type='text' name='phoneNumber' class='form-control' placeholder='090-xxx-xxx'id='ph' value='".$phnum."' readonly>
+								</div>
+							</div>
+							<div class='col-xs-3'>
+								<div class='form-group'>
+									<label for='em'>E-mail</label>
+										<input type='text' name='e_mail' class='form-control' placeholder='E-mail' id='email' value='".$_SESSION['email']."' readonly>
+								</div>
 							</div>
 						</div>";
 				}else {
