@@ -1,5 +1,6 @@
 <?php
 	include "navbar.php";
+	//include "fake_session.php";
 ?>
 <!DOCTYPE = html>
 <html>
@@ -70,12 +71,12 @@
 						<b>การอนุมัติ:</b>$approv";
 				if($approv == "รอการอนุมัติ"){
 					echo "<form action='' method='post'><input name='changeApp' type='submit' value='เปลี่ยนเป็นอนุมัติแล้ว' class='btn btn-primary btn-sm'> </form>";
-				}else echo "<br>";
+				}else {echo "<br>";}
 				echo "<b>สถานะ:</b> $status <form action='' method='post'><input name='changeStat' type='text' placeholder='กรอกข้อความแก้ไขสถานะ'><input type='submit' value='ส่ง' class='btn btn-sm'></form>";
 				echo "</div>";
 				$connect->close();
-			}else{echo ("ไม่ใช่ฝ่ายการเงินห้ามดูน้าา");
-				}
+			}else{echo "<font size='5' color='red'>เฉพาะฝ่ายการเงินเท่านั้น</font>";
+			}
 		?>
   		<p class="text-right"><button class='btn'><a href="ShowFinanceData.php">Back to previous page</a></button></p>
 		</div>

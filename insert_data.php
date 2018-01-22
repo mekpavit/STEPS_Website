@@ -30,7 +30,7 @@
 		}
 		$connect->close();
 		//echo "<script>alert('success');</script>";
-		header( "refresh:0;url=show_success.php" );
+		header( "refresh:0;url=ShowSuccess.php" );
 	}else{
 		header("Location: RequestForm.php");
 	}
