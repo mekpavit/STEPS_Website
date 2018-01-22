@@ -17,7 +17,7 @@
 		<script src="../js/bootstrap_4.0/bootstrap.min.js"></script>
 		<title> STEPS : Finance Request Form </title>
 	<body>
-
+		
 		<div class="container">
 			<header><h2>Finance Request Form</h2></header>
 			<p class="text-right"><font size="4"><b>เลขที่ใบเสนอซื้อ:</b></font>
@@ -34,10 +34,12 @@
 					$result = $connect->query($cmd);
 
 					if ($result->num_rows == 0) {
-				   		echo "1";
+						$bill_no = 1;
+				   		printf($bill_no);
 				   	}
 				   	else {
-				   		echo $result->num_rows+1;
+				   		$bill_no = $result->num_rows+1;
+				   		printf($bill_no);
 				   	}
 
 				   	$connect->close();
@@ -90,22 +92,28 @@
 						</div>";
 				}else {
 					echo "<div class='row'>
-							<div class='col-xs-4'>
+							<div class='col-xs-3'>
 								<div class='form-group'>
 									<label for='propo'>ผู้ติดต่อ</label>
 										<input type='text' name='proposer' class='form-control' placeholder='ชื่อผู้ติดต่อ' id='propo'>
 								</div>
 							</div>
-							<div class='col-xs-4'>
+							<div class='col-xs-3'>
 								<div class='form-group'>
 									<label for='fd'>ฝ่าย</label>
 										<input type='text' name='field' class='form-control' placeholder='ฝ่ายของคุณ' id='fd'>
 								</div>
 							</div>
-							<div class='col-xs-4'>
+							<div class='col-xs-3'>
 								<div class='form-group'>
 									<label for='ph'>เบอร์ติดต่อ</label>
 								<input type='text' name='phoneNumber' class='form-control' placeholder='090-xxx-xxx'id='ph'>
+								</div>
+							</div>
+							<div class='col-xs-3'>
+								<div class='form-group'>
+									<label for='em'>E-mail</label>
+										<input type='text' name='e_mail' class='form-control' placeholder='steps_od@gmail.com' id='email'>
 								</div>
 							</div>
 						</div>";
@@ -184,7 +192,8 @@
 			<input type="submit" value="ส่งแบบฟอร์ม" class="btn btn-primary">
 		</form>
 
-		<p class="text-right"><font color="red">**เฉพาะฝ่ายการเงิน</font><br><button class='btn btn-xs'><a href="ShowFinanceData.php">ดูใบเบิกทั้งหมด</a></button></p>
-
+		<button class='btn btn-m'><a href="ShowFinanceStatus.php">ตรวจสอบสถานะใบเสนอซื้อ</a></button>
+		<p class="text-right"><button class='btn btn-xs'><a href="ShowFinanceData.php">ดูใบเสนอซื้อทั้งหมด (เฉพาะฝ่ายการเงิน)</a></button></p>
+		
 	</body>
 </html>

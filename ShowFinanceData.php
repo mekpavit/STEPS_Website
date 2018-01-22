@@ -1,5 +1,6 @@
 <?php
 	include "navbar.php";
+	//include "fake_session.php";
 ?>
 <!DOCTYPE = html>
 <html>
@@ -52,6 +53,8 @@
 					}
 					echo "</div>";
 					$connect->close();
+				} else { echo "<font size='5' color='red'>เฉพาะฝ่ายการเงินเท่านั้น</font>";
+
 				}
 			?>
 		<p class="text-right"><button class='btn btn'><a href="RequestForm.php">กลับไปหน้าฟอร์ม</a></button></p>
