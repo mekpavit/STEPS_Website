@@ -22,10 +22,11 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="member.php">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="member.php"> Member </a></li>
+        <li><a href="information.php">Info</a></li> 
+        <li><a href="RequestForm.php">Finance</a></li> 
+        
 
         <!-- link for only-member page /-->
          <?php
